@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ffecff14"
+    android:background="#9da"
     android:gravity="center"
     android:orientation="vertical"
     tools:context=".MiLogin">
@@ -21,10 +21,14 @@
         android:hint="password"
         android:imeOptions="actionDone"
         android:inputType="textPassword" />
+
+
     <Button
         android:id="@+id/btnLogin"
         android:layout_width="220dp"
         android:layout_height="45dp"
         android:onClick="onLogin"
-        android:text="Ingresar" />
+        android:text="Ingresar"
+        style="@style/Widget.MaterialComponents.BottomAppBar.Colored" />
+
 </LinearLayout>
