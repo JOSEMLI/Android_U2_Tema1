@@ -27,6 +27,7 @@ public class MiLogin extends AppCompatActivity {
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
+    //es una forma de guardar informacion
     prefs = getSharedPreferences("Config", MODE_PRIVATE);
     login = prefs.getBoolean("onlogin", false);
     if (login) {
@@ -42,6 +43,9 @@ public class MiLogin extends AppCompatActivity {
   public int ValidaDatos(String usuario, String pass) {
     int result = 3;
     try {
+      //para saber que datos estamos enviando
+      Log.i("miruta",getString(R.string.dominio) + getString(R.string.login) + usuario + "&pass=" + pass);
+      //solo fue un agregado
       URL url = new URL(getString(R.string.dominio) + getString(R.string.login) + usuario + "&pass=" + pass);
       conexion = (HttpURLConnection) url
           .openConnection();
@@ -66,8 +70,10 @@ public class MiLogin extends AppCompatActivity {
   public void onLogin(View view) {
     int V = ValidaDatos(Login.getText().toString(), password.getText().toString());
     if (V == 0) {
+      //para editar los campos
       editor = prefs.edit();
       editor.putBoolean("onlogin", true);
+      //aplica los cambios seleccionados
       editor.apply();
       Intent i = new Intent(this, MainActivity.class);
       startActivity(i);
