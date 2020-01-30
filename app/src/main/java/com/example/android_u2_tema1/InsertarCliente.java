@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -32,6 +33,7 @@ public class InsertarCliente extends AppCompatActivity {
     telefono = (EditText) findViewById(R.id.telefono);
     apellido = (EditText) findViewById(R.id.apellido);
     sexo = (Spinner) findViewById(R.id.sexo);
+    //esto es otra forma de hacer un if mas comprimida
     isexo=(sexo.getSelectedItem().toString().equals("Masculino"))?0:1;
   }
 
@@ -53,7 +55,15 @@ public class InsertarCliente extends AppCompatActivity {
           Log.e("mierror","Error en servicio Web nueva");
         }
         else
-        {Log.e("mierror","No hay error");}
+        {
+          //este es un mensaje que le mistrara  con el toast
+          Toast.makeText(this, "Ingreso Exitosa", Toast.LENGTH_SHORT).show();
+
+          //y finalisamos la actividad y actualice
+          finish();
+
+          Log.e("mierror","No hay error");
+        }
       } else {
         Log.e("mierror", conexion.getResponseMessage());
       }

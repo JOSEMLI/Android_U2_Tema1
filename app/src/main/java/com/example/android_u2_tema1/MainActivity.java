@@ -100,4 +100,11 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
   }
+
+  // se modifico pa la actualizacion de datos
+  @Override
+  protected void onResume() {
+    super.onResume();
+    adaptador.update(ListaClientes(conseguirstring()));
+  }
 }
