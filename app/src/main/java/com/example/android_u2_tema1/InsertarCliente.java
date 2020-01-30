@@ -83,6 +83,4 @@ public class InsertarCliente extends AppCompatActivity {
       }
     }
   }
-
-
 }
