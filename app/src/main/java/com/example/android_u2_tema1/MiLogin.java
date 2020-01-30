@@ -27,7 +27,7 @@ public class MiLogin extends AppCompatActivity {
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    //es una forma de guardar informacion
+    //es una forma de guardar informacion en el archivo config
     prefs = getSharedPreferences("Config", MODE_PRIVATE);
     login = prefs.getBoolean("onlogin", false);
     if (login) {

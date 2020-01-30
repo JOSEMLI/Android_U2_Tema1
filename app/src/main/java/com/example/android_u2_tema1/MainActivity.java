@@ -4,8 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -34,8 +37,10 @@ public class MainActivity extends AppCompatActivity {
     misdatos = new ArrayList<>();
     misdatos.add(new Cliente("1", "Juanito", "Perez"));
     misdatos.add(new Cliente("2", "Pablito", "Canto"));
+
     //cambiamos esta linea que solo leia este array lkist por otra liena  que lee datos del internet
    // adaptador = new MiNuevoAdaptador(this, misdatos);
+
     //cambiamos por esta linea y se agrego el conseguirstring() en la lista cliente
     adaptador = new MiNuevoAdaptador(this,
       ListaClientes(conseguirstring()));
@@ -49,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
   private ArrayList<Cliente> ListaClientes(String string) {
     ArrayList<Cliente> Clientes = new ArrayList<>();
     try {
+      //convierte de json array a lista
       JSONArray json_array = new JSONArray(string);
       for (int i = 0; i < json_array.length(); i++) {
         JSONObject objeto = json_array.getJSONObject(i);
@@ -77,5 +83,21 @@ public class MainActivity extends AppCompatActivity {
       if (conexion!=null) conexion.disconnect();
     }
     return res;
+  }
+
+  @Override
+  public boolean onCreateOptionsMenu(Menu menu) {
+    getMenuInflater().inflate(R.menu.menu_insertar, menu);
+    return true;
+  }
+  @Override
+  public boolean onOptionsItemSelected(MenuItem item) {
+    switch (item.getItemId()) {
+      case R.id.menu_insertar:
+        startActivity(new Intent(this, InsertarCliente.class));
+        return true;
+      default:
+        return super.onOptionsItemSelected(item);
+    }
   }
 }
