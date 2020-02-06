@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Registrocliente">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Datos del Cliente  :"
+        android:id="@+id/textView"
+        android:textStyle="bold"
+        android:layout_row="1"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="0dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="0dp"
+        android:layout_column="0" />
+
+    <EditText
+        android:layout_width="159dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/nombrecli"
+        android:hint="Nombre"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="left|center_vertical"
+        android:layout_column="0"
+        android:layout_row="2" />
+    <EditText
+        android:layout_width="159dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/apellidocli"
+        android:hint="Apellido"
+        android:layout_below="@+id/nombrecli"
+        android:layout_alignLeft="@+id/nombrecli"
+        android:layout_alignStart="@+id/nombrecli"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="left|center_vertical"
+        android:layout_column="0"
+        android:layout_row="3" />
+    <EditText
+        android:layout_width="159dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/sexocli"
+        android:hint="Sexo"
+        android:layout_below="@+id/apellidocli"
+        android:layout_alignLeft="@+id/apellidocli"
+        android:layout_alignStart="@+id/apellidocli"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="left|center_vertical"
+        android:layout_column="0"
+        android:layout_row="4" />
+    <EditText
+        android:layout_width="159dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/celularcli"
+        android:hint="Celular"
+        android:layout_below="@+id/apellidocli"
+        android:layout_alignLeft="@+id/apellidocli"
+        android:layout_alignStart="@+id/apellidocli"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="left|center_vertical"
+        android:layout_column="0"
+        android:layout_row="5" />
+    <EditText
+        android:layout_width="159dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/fechacli"
+        android:hint="Fecha Ingreso"
+        android:layout_below="@+id/apellidocli"
+        android:layout_alignLeft="@+id/apellidocli"
+        android:layout_alignStart="@+id/apellidocli"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="left|center_vertical"
+        android:layout_column="0"
+        android:layout_row="6" />
+    <EditText
+        android:layout_width="159dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/dciliocli"
+        android:hint="Domicilio"
+        android:layout_below="@+id/apellidocli"
+        android:layout_alignLeft="@+id/apellidocli"
+        android:layout_alignStart="@+id/apellidocli"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="left|center_vertical"
+        android:layout_column="0"
+        android:layout_row="7" />
+    <EditText
+        android:layout_width="159dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/usuariocli"
+        android:hint="Usuario"
+        android:layout_below="@+id/apellidocli"
+        android:layout_alignLeft="@+id/apellidocli"
+        android:layout_alignStart="@+id/apellidocli"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="left|center_vertical"
+        android:layout_column="0"
+        android:layout_row="8" />
+    <EditText
+        android:layout_width="159dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/passcli"
+        android:hint="Contraseña"
+        android:layout_below="@+id/apellidocli"
+        android:layout_alignLeft="@+id/apellidocli"
+        android:layout_alignStart="@+id/apellidocli"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="left|center_vertical"
+        android:layout_column="0"
+        android:layout_row="9" />
+
+
+
+
+    <Button
+        android:layout_width="145dp"
+        android:layout_height="wrap_content"
+        android:text="Modificar"
+        android:id="@+id/btnmodificar"
+        android:layout_row="23"
+        android:layout_marginBottom="45dp"
+        android:layout_gravity="left|bottom"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/nombrecli"
+        android:layout_toEndOf="@+id/nombrecli"
+        android:layout_column="0" />
+</GridLayout>
