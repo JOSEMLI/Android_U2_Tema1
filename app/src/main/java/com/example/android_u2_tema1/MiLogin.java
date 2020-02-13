@@ -10,6 +10,7 @@ import android.os.StrictMode;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import java.io.BufferedReader;
@@ -24,6 +25,9 @@ public class MiLogin extends AppCompatActivity {
   private SharedPreferences prefs;
   private SharedPreferences.Editor editor;
   private boolean login;
+
+
+
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -75,6 +79,8 @@ public class MiLogin extends AppCompatActivity {
 
   class MiTarea extends AsyncTask<Void, Void, Void> {
     int V = ValidaDatos(Login.getText().toString(), password.getText().toString());
+
+
     @Override
     protected Void doInBackground(Void... voids) {
 
@@ -85,10 +91,16 @@ public class MiLogin extends AppCompatActivity {
         Intent i = new Intent(MiLogin.this, MainActivity.class);
         startActivity(i);
         finish();
+
       } else
         Toast.makeText(MiLogin.this, "Ingreso Fallido", Toast.LENGTH_SHORT).show();
       return null;
     }
+
+
+
+
+
   }
 
 

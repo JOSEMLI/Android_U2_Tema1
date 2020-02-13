@@ -22,13 +22,24 @@
     <EditText
         android:layout_width="159dp"
         android:layout_height="wrap_content"
+        android:id="@+id/codigocli"
+        android:hint="Codigo"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="left|center_vertical"
+        android:layout_column="0"
+        android:layout_row="2" />
+
+    <EditText
+        android:layout_width="159dp"
+        android:layout_height="wrap_content"
         android:id="@+id/nombrecli"
         android:hint="Nombre"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_gravity="left|center_vertical"
         android:layout_column="0"
-        android:layout_row="2" />
+        android:layout_row="3" />
     <EditText
         android:layout_width="159dp"
         android:layout_height="wrap_content"
@@ -41,7 +52,7 @@
         android:layout_centerHorizontal="true"
         android:layout_gravity="left|center_vertical"
         android:layout_column="0"
-        android:layout_row="3" />
+        android:layout_row="4" />
     <EditText
         android:layout_width="159dp"
         android:layout_height="wrap_content"
@@ -54,7 +65,7 @@
         android:layout_centerHorizontal="true"
         android:layout_gravity="left|center_vertical"
         android:layout_column="0"
-        android:layout_row="4" />
+        android:layout_row="5" />
     <EditText
         android:layout_width="159dp"
         android:layout_height="wrap_content"
@@ -67,7 +78,7 @@
         android:layout_centerHorizontal="true"
         android:layout_gravity="left|center_vertical"
         android:layout_column="0"
-        android:layout_row="5" />
+        android:layout_row="6" />
     <EditText
         android:layout_width="159dp"
         android:layout_height="wrap_content"
@@ -80,11 +91,11 @@
         android:layout_centerHorizontal="true"
         android:layout_gravity="left|center_vertical"
         android:layout_column="0"
-        android:layout_row="6" />
+        android:layout_row="7" />
     <EditText
         android:layout_width="159dp"
         android:layout_height="wrap_content"
-        android:id="@+id/dciliocli"
+        android:id="@+id/domiciliocli"
         android:hint="Domicilio"
         android:layout_below="@+id/apellidocli"
         android:layout_alignLeft="@+id/apellidocli"
@@ -93,7 +104,7 @@
         android:layout_centerHorizontal="true"
         android:layout_gravity="left|center_vertical"
         android:layout_column="0"
-        android:layout_row="7" />
+        android:layout_row="8" />
     <EditText
         android:layout_width="159dp"
         android:layout_height="wrap_content"
@@ -106,7 +117,7 @@
         android:layout_centerHorizontal="true"
         android:layout_gravity="left|center_vertical"
         android:layout_column="0"
-        android:layout_row="8" />
+        android:layout_row="9" />
     <EditText
         android:layout_width="159dp"
         android:layout_height="wrap_content"
@@ -119,7 +130,7 @@
         android:layout_centerHorizontal="true"
         android:layout_gravity="left|center_vertical"
         android:layout_column="0"
-        android:layout_row="9" />
+        android:layout_row="10" />
 
 
 
