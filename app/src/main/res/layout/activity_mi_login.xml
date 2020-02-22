@@ -30,6 +30,11 @@
         android:onClick="onLogin"
         android:text="Ingresar"
         style="@style/Widget.MaterialComponents.BottomAppBar.Colored" />
+    <ProgressBar
+        android:id="@+id/progresslogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
 
 
 </LinearLayout>
